@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Siva Sai Chary Mutyala — System Assurance / RAMS Engineer for the railway sector. RAM analysis & prediction, FMECA, hazard analysis (PHA/SHA/IHA), RAM demonstration and LCC per CENELEC EN 50126." />
+  <meta name="theme-color" content="#0b1220" />
+  <title>Siva Sai Chary Mutyala — System Assurance / RAMS Engineer</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231668e3'/%3E%3Cstop offset='1' stop-color='%2338bdf8'/%3E%3C/linearGradient%3E%3Crect width='48' height='48' rx='12' fill='url(%23g)'/%3E%3Cg fill='none' stroke='%23fff' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 33V21a8 8 0 0 1 16 0v12'/%3E%3Crect x='19' y='19.5' width='10' height='6.5' rx='1.8'/%3E%3Cpath d='M19.6 28.8h2.2M26.2 28.8h2.2'/%3E%3Cpath d='M14.5 33.5h19'/%3E%3Cpath d='m18.2 37.2-2.7 4.4M29.8 37.2l2.7 4.4M13.8 41.6h20.4'/%3E%3C/g%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Icon library -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V11M9.33 20V5M14.67 20v-6M20 20V8M2.5 20h19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.5 20h19L12 3.5zM12 10v4M12 16.8v.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24"><path d="M9 4h6v3H9zM8 5.5H6a1 1 0 0 0-1 1V20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6.5a1 1 0 0 0-1-1h-2M8.5 12h7M8.5 16h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.5 6.5a4.5 4.5 0 0 0-6 5.7L3 17.7V21h3.3l5.5-5.5a4.5 4.5 0 0 0 5.7-6L14.5 12 12 9.5l2.5-3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-coins" viewBox="0 0 24 24"><ellipse cx="12" cy="6.5" rx="7.5" ry="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4.5 6.5v5c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3v-5M4.5 11.5v5c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3v-5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17.5c3-6 6-9 9-9s4.5 2 6 4.5c1-1.5 2-2.5 3-3M3 21h18M17 9.5h3.5V13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-cycle" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 3.5V8h-4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-train" viewBox="0 0 24 24"><path d="M6 3.5h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-10a2 2 0 0 1 2-2zM4 9.5h16M8.5 13.5h.1M15.5 13.5h.1M8 17.5l-2 3M16 17.5l2 3M4 20.5h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3.5 6.5h17v11h-17zM3.5 7l8.5 6 8.5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M7 3.5H4.5a1.5 1.5 0 0 0-1.5 1.7c.6 6.6 5.1 11.1 11.7 11.7A1.5 1.5 0 0 0 16.5 15.5V13l-4-1.5-1.7 2a13.6 13.6 0 0 1-5.5-5.5l2-1.7L7 3.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.5-6.5-10.5a6.5 6.5 0 0 1 13 0C18.5 15.5 12 21 12 21zM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4.5 4.5 0 0 0 6.4.4l3-3a4.5 4.5 0 0 0-6.4-6.4l-1.5 1.5M14 10a4.5 4.5 0 0 0-6.4-.4l-3 3a4.5 4.5 0 0 0 6.4 6.4l1.5-1.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3.5v11M7.5 10.5 12 15l4.5-4.5M4.5 19.5h15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6 6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 7.9 7.5 9.5 4.3-1.6 7.5-4.9 7.5-9.5V6L12 3zM8.8 12l2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3 10.5 13.5M21 3l-6.5 18-4-8-8-4L21 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5 15H4.5A1.5 1.5 0 0 1 3 13.5v-9A1.5 1.5 0 0 1 4.5 3h9A1.5 1.5 0 0 1 15 4.5V5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><path d="M4 21V5a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v16M15 9h3a2 2 0 0 1 2 2v10M2 21h20M8 7h3M8 11h3M8 15h3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-grad" viewBox="0 0 24 24"><path d="m12 4 10 5-10 5L2 9l10-5zM6 11.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5M22 9v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-tower" viewBox="0 0 24 24"><circle cx="12" cy="6.4" r="1.7" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 21V8.3M9.4 21 12 13.4l2.6 7.6M7.6 6.6a6.4 6.4 0 0 0 0 9.2M16.4 6.6a6.4 6.4 0 0 1 0 9.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-signal" viewBox="0 0 24 24"><rect x="8.5" y="2.5" width="7" height="13" rx="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="6.7" r="1.3" fill="currentColor"/><circle cx="12" cy="11.3" r="1.3" fill="currentColor"/><path d="M12 15.5v5.5M9 21h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-doors" viewBox="0 0 24 24"><path d="M3.5 3.5h17v17h-17zM12 3.5v17M10.6 10v4M13.4 10v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="brand" aria-label="Back to top">
+        <span class="brand-mark" aria-hidden="true"><svg class="logo-glyph" viewBox="0 0 48 48"><g fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 33V21a8 8 0 0 1 16 0v12"/><rect x="19" y="19.5" width="10" height="6.5" rx="1.8"/><path d="M19.6 28.8h2.2M26.2 28.8h2.2"/><path d="M14.5 33.5h19"/><path d="m18.2 37.2-2.7 4.4M29.8 37.2l2.7 4.4M13.8 41.6h20.4"/></g></svg></span>
+        <span class="brand-text">Siva Sai Chary<em>RAMS Engineer</em></span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+      <div class="nav-tools">
+        <button class="icon-btn" id="themeToggle" aria-label="Switch to dark theme" title="Toggle theme">
+          <svg class="ico ico-sun"><use href="#i-sun"/></svg>
+          <svg class="ico ico-moon"><use href="#i-moon"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="pulse-dot"></span> Hello, I'm</p>
+          <h1>Siva Sai Chary <span class="accent">Mutyala</span></h1>
+          <p class="hero-role"><span id="typewriter"></span><span class="caret" aria-hidden="true"></span></p>
+          <p class="hero-lead">System Assurance / RAMS engineer with <strong>2+ years</strong> in the railway sector — keeping rolling stock, signalling, telecom, power supply and OHE systems <strong>reliable, available and safe</strong> across the full EN&nbsp;50126 lifecycle.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Get in touch</a>
+            <a href="CV_SIVA.pdf" class="btn btn-ghost" download><svg class="ico"><use href="#i-download"/></svg> Download CV</a>
+          </div>
+          <ul class="hero-stats">
+            <li><strong id="expYears" data-count="2">2</strong><span>Years' experience</span></li>
+            <li><strong data-count="7" data-suffix="+">0</strong><span>Railway projects</span></li>
+            <li><strong data-count="5">0</strong><span>System domains</span></li>
+            <li><strong class="no-count">EN 50126</strong><span>CENELEC standard</span></li>
+          </ul>
+        </div>
+
+        <aside class="hero-panel reveal delay-2" aria-label="RAMS dashboard preview">
+          <div class="panel-head"><span class="live-dot"></span> System Assurance Dashboard <span class="panel-tag">EN 50126</span></div>
+          <div class="gauges">
+            <div class="gauge">
+              <div class="gauge-ring" style="--target:95"><span class="gauge-num" data-count="95" data-suffix="%">0</span></div>
+              <p>Reliability</p>
+            </div>
+            <div class="gauge">
+              <div class="gauge-ring" style="--target:93"><span class="gauge-num" data-count="93" data-suffix="%">0</span></div>
+              <p>Availability</p>
+            </div>
+            <div class="gauge">
+              <div class="gauge-ring" style="--target:90"><span class="gauge-num" data-count="90" data-suffix="%">0</span></div>
+              <p>Maintainability</p>
+            </div>
+          </div>
+          <div class="panel-chips">
+            <span>RAM Plan</span><span>FMECA</span><span>PHA · SHA · IHA</span><span>Hazard Log</span><span>RAM Demonstration</span><span>LCC</span><span>Weibull</span><span>FRACAS</span>
+          </div>
+          <p class="panel-foot">Delivering RAMS &amp; Safety Assurance across the railway system lifecycle.</p>
+        </aside>
+      </div>
+    </section>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">About me</span>
+          <h2>Engineering <span class="accent">confidence</span> into railway systems</h2>
+          <p>Two years of hands-on RAMS and Safety Assurance work across rolling stock, signalling, telecom, power supply and OHE projects.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-card reveal">
+            <p>I'm a <strong>System Assurance / RAMS engineer</strong> supporting railway projects through the full EN&nbsp;50126 lifecycle — from RAM planning and apportionment through analysis, demonstration and safety deliverables.</p>
+            <p>Day to day I develop and maintain <strong>RAM Plans, FMECA, RAM analysis &amp; prediction and RAM demonstration</strong> reports, manage hazard logs through PHA/SHA/IHA studies, and run maintainability, spare-parts, Weibull and life-cycle-cost analyses to keep projects compliant and available.</p>
+            <p>I thrive working with multidisciplinary teams, suppliers, OEMs and stakeholders to turn reliability data into decisions.</p>
+            <ul class="about-points">
+              <li><svg class="ico"><use href="#i-shield"/></svg> Safety &amp; assurance across the V-cycle</li>
+              <li><svg class="ico"><use href="#i-chart"/></svg> Data-driven reliability decisions</li>
+              <li><svg class="ico"><use href="#i-train"/></svg> Rolling stock, signalling &amp; PSD know-how</li>
+            </ul>
+          </div>
+          <div class="about-facts reveal delay-1">
+            <div class="fact"><span>Current role</span><strong>System Assurance Engineer</strong></div>
+            <div class="fact"><span>Organisation</span><strong>ASCRIT Private Limited</strong></div>
+            <div class="fact"><span>Experience</span><strong>Oct 2024 — Present</strong></div>
+            <div class="fact"><span>Sector</span><strong>Railway — Metro &amp; Mainline</strong></div>
+            <div class="fact"><span>Core standard</span><strong>CENELEC EN 50126 (RAMS)</strong></div>
+            <div class="fact"><span>Tools</span><strong>DOORS · MS Office · FRACAS</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section class="section alt" id="expertise">
+      <div class="container">
+        <div class="section-head center">
+          <span class="kicker">What I do</span>
+          <h2>Core <span class="accent">RAMS</span> expertise</h2>
+          <p>The disciplines I apply every day to make railway systems reliable, available, maintainable and safe.</p>
+        </div>
+        <div class="cards-grid">
+          <article class="expertise-card reveal">
+            <div class="card-icon"><svg class="ico"><use href="#i-chart"/></svg></div>
+            <h3>RAM Analysis &amp; Prediction</h3>
+            <p>Apportionment, prediction and RBD modelling to verify contractual reliability and availability targets.</p>
+          </article>
+          <article class="expertise-card reveal delay-1">
+            <div class="card-icon"><svg class="ico"><use href="#i-list"/></svg></div>
+            <h3>FMEA / FMECA</h3>
+            <p>Subsystem failure mode, effects and criticality analysis driving design and maintenance decisions.</p>
+          </article>
+          <article class="expertise-card reveal delay-2">
+            <div class="card-icon warn"><svg class="ico"><use href="#i-alert"/></svg></div>
+            <h3>Hazard &amp; Risk Assessment</h3>
+            <p>PHA, SHA and IHA with structured risk evaluation and disciplined hazard log management.</p>
+          </article>
+          <article class="expertise-card reveal delay-3">
+            <div class="card-icon"><svg class="ico"><use href="#i-clipboard"/></svg></div>
+            <h3>RAM Demonstration</h3>
+            <p>Demonstration plans and reports backed by FRACAS analysis of operational failure data.</p>
+          </article>
+          <article class="expertise-card reveal">
+            <div class="card-icon"><svg class="ico"><use href="#i-wrench"/></svg></div>
+            <h3>Maintainability &amp; Spares</h3>
+            <p>MA, SMA, MTA and LORA studies plus spare-parts analysis to optimise availability.</p>
+          </article>
+          <article class="expertise-card reveal delay-1">
+            <div class="card-icon ok"><svg class="ico"><use href="#i-coins"/></svg></div>
+            <h3>Life Cycle Cost (LCC)</h3>
+            <p>Preventive &amp; corrective maintenance and spares cost modelling for asset decisions.</p>
+          </article>
+          <article class="expertise-card reveal delay-2">
+            <div class="card-icon"><svg class="ico"><use href="#i-trend"/></svg></div>
+            <h3>Weibull Analysis</h3>
+            <p>Distribution fitting to characterise failure behaviour and optimise maintenance strategy.</p>
+          </article>
+          <article class="expertise-card reveal delay-3">
+            <div class="card-icon ok"><svg class="ico"><use href="#i-cycle"/></svg></div>
+            <h3>Obsolescence Management</h3>
+            <p>Obsolescence studies for rolling-stock subsystems — air duct, lighting, pantry and sanitary systems.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Skills</span>
+          <h2>Technical <span class="accent">proficiency</span></h2>
+          <p>A snapshot of the RAMS, safety and engineering skills I bring to every project.</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-bars reveal">
+            <div class="skill" data-level="95">
+              <div class="skill-top"><span>RAM Analysis, Prediction &amp; Demonstration</span><strong>95%</strong></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill" data-level="92">
+              <div class="skill-top"><span>CENELEC Standards (EN 50126)</span><strong>92%</strong></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill" data-level="90">
+              <div class="skill-top"><span>Reliability Engineering (RBD, FMEA/FMECA)</span><strong>90%</strong></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill" data-level="90">
+              <div class="skill-top"><span>Hazard &amp; Risk Assessment (PHA · SHA · IHA)</span><strong>90%</strong></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill" data-level="88">
+              <div class="skill-top"><span>Maintainability, Spare Parts &amp; LCC Analysis</span><strong>88%</strong></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill" data-level="85">
+              <div class="skill-top"><span>Hazard Log Management &amp; Safety Assurance</span><strong>85%</strong></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill" data-level="85">
+              <div class="skill-top"><span>Weibull Analysis</span><strong>85%</strong></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill" data-level="88">
+              <div class="skill-top"><span>Technical Documentation &amp; Reporting</span><strong>88%</strong></div>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+          </div>
+          <div class="skill-side reveal delay-1">
+            <div class="side-block">
+              <h3>Standards &amp; Methods</h3>
+              <div class="chips">
+                <span>EN 50126</span><span>EN 50128</span><span>EN 50129</span><span>CENELEC</span>
+                <span>V-Model</span><span>RBD</span><span>FMECA</span><span>FRACAS</span><span>LORA</span><span>Safety Case</span>
+              </div>
+            </div>
+            <div class="side-block">
+              <h3>Tools</h3>
+              <div class="chips">
+                <span>IBM DOORS</span><span>Excel (RAM models)</span><span>Word</span><span>PowerPoint</span><span>SharePoint</span>
+              </div>
+            </div>
+            <div class="side-block">
+              <h3>Professional strengths</h3>
+              <div class="chips chips-accent">
+                <span>Supplier &amp; Stakeholder Management</span><span>Multidisciplinary Collaboration</span>
+                <span>Requirements Management</span><span>Attention to Detail</span><span>Technical Reporting</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- EXPERIENCE -->
+    <section class="section alt" id="experience">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Experience</span>
+          <h2>Professional <span class="accent">journey</span></h2>
+          <p>Delivering RAMS and Safety Assurance on live railway projects — expand each block for the details.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="tl-item reveal">
+            <div class="tl-dot"><svg class="ico"><use href="#i-building"/></svg></div>
+            <div class="tl-card">
+              <button class="tl-toggle" aria-expanded="true" aria-controls="exp-detail">
+                <div class="tl-meta">
+                  <h3>System Assurance Engineer / RAMS Engineer</h3>
+                  <p class="tl-org">ASCRIT Private Limited</p>
+                </div>
+                <div class="tl-right">
+                  <span class="badge badge-now">Current</span>
+                  <span class="badge badge-tenure" id="expTenure">2 yrs 0 mos</span>
+                  <span class="tl-date">Oct 2024 — Present</span>
+                  <span class="chev" aria-hidden="true"></span>
+                </div>
+              </button>
+              <div class="tl-body open" id="exp-detail">
+                <div class="tl-body-inner">
+                  <div class="role-block">
+                    <h4>Vande Bharat Train — Rolling Stock</h4>
+                    <ul>
+                      <li>RAM apportionment &amp; prediction, PHA/SHA hazard analysis and hazard log management for system-level RAMS requirements.</li>
+                      <li>Obsolescence management for air duct, interior lighting, pantry and sanitary subsystems.</li>
+                      <li>Weibull analysis of interior lighting components to guide reliability improvement and maintenance optimisation.</li>
+                    </ul>
+                  </div>
+                  <div class="role-block">
+                    <h4>DMRC Phase-4 (Telecom) · TRAC (GA PSD) · MML5 Signalling</h4>
+                    <ul>
+                      <li>Oversee RAM activities and preparation/review of RAM deliverables: RAM Plan, FMECA, RAM Analysis &amp; Prediction, RAM Demonstration Plans &amp; Reports.</li>
+                    </ul>
+                  </div>
+                  <div class="role-block">
+                    <h4>GMRC Phase-1 (Telecom) · RRTS (PST &amp; OHE)</h4>
+                    <ul>
+                      <li>RAM activities throughout the system lifecycle plus supporting safety deliverables.</li>
+                      <li>Safety Assurance for Stages 3 &amp; 4 of the RRTS project (PST &amp; OHE).</li>
+                      <li>Performance monitoring &amp; RAM demonstration via FRACAS analysis of operational and failure data.</li>
+                    </ul>
+                  </div>
+                  <div class="role-block">
+                    <h4>GMRC Phase-2 (Signalling)</h4>
+                    <ul>
+                      <li>Interface Hazard Analysis (IHA) for the Rolling Stock–Signalling interface — hazard identification, risk assessment and mitigation.</li>
+                      <li>RAM Analysis &amp; Prediction for the signalling system.</li>
+                    </ul>
+                  </div>
+                  <div class="role-block">
+                    <h4>Cross-project competencies</h4>
+                    <ul>
+                      <li>RBD modelling to verify contractual RAM requirements; FMEA/FMECA development and maintenance.</li>
+                      <li>PHA, SHA, IHA and risk assessments; Maintainability Analysis (MA, SMA, MTA, LORA) and spare-parts analysis.</li>
+                      <li>Life Cycle Cost analysis (PM, CM, spares); collaboration with multidisciplinary teams, suppliers, OEMs and stakeholders.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head center">
+          <span class="kicker">Projects</span>
+          <h2>Railway <span class="accent">project portfolio</span></h2>
+          <p>Live metro and mainline programmes where I've owned or supported RAMS and Safety Assurance activities.</p>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filter projects by domain">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="rolling">Rolling Stock</button>
+          <button class="filter-btn" data-filter="signalling">Signalling</button>
+          <button class="filter-btn" data-filter="telecom">Telecom</button>
+          <button class="filter-btn" data-filter="ps">PS &amp; Traction</button>
+          <button class="filter-btn" data-filter="psd">PSD</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <article class="project-card reveal" data-cat="rolling">
+            <div class="project-top">
+              <span class="p-cat cat-rolling">Rolling Stock</span>
+              <span class="p-year">2024 — Present</span>
+            </div>
+            <div class="p-icon"><svg class="ico"><use href="#i-train"/></svg></div>
+            <h3>Vande Bharat Train</h3>
+            <p>RAM apportionment &amp; prediction, PHA/SHA hazard analysis, hazard log management and supplier coordination — plus obsolescence and Weibull studies on interior lighting.</p>
+            <div class="p-chips"><span>RAM Prediction</span><span>PHA / SHA</span><span>Hazard Log</span><span>Weibull</span></div>
+          </article>
+
+          <article class="project-card reveal delay-1" data-cat="telecom">
+            <div class="project-top">
+              <span class="p-cat cat-telecom">Telecom</span>
+              <span class="p-year">2024 — Present</span>
+            </div>
+            <div class="p-icon"><svg class="ico"><use href="#i-tower"/></svg></div>
+            <h3>DMRC Phase-4 — Telecom</h3>
+            <p>RAM activities and deliverables for Delhi Metro Phase-4 telecom: RAM Plan, FMECA, RAM Analysis &amp; Prediction and RAM Demonstration plans &amp; reports.</p>
+            <div class="p-chips"><span>RAM Plan</span><span>FMECA</span><span>Demonstration</span></div>
+          </article>
+
+          <article class="project-card reveal delay-2" data-cat="signalling">
+            <div class="project-top">
+              <span class="p-cat cat-signalling">Signalling</span>
+              <span class="p-year">2024 — Present</span>
+            </div>
+            <div class="p-icon"><svg class="ico"><use href="#i-signal"/></svg></div>
+            <h3>MML5 Signalling</h3>
+            <p>Preparation and review of RAM deliverables — RAM Plan, FMECA, RAM Analysis &amp; Prediction and RAM Demonstration documentation.</p>
+            <div class="p-chips"><span>Deliverables</span><span>FMECA</span><span>RAM Analysis</span></div>
+          </article>
+
+          <article class="project-card reveal delay-3" data-cat="psd">
+            <div class="project-top">
+              <span class="p-cat cat-psd">PSD</span>
+              <span class="p-year">2024 — Present</span>
+            </div>
+            <div class="p-icon"><svg class="ico"><use href="#i-doors"/></svg></div>
+            <h3>TRAC — GA PSD</h3>
+            <p>GA PSD (Generic Application PSD) — a platform screen door system designed for generic use rather than any specific application; RAM deliverables and availability assessment across deployments.</p>
+            <div class="p-chips"><span>Generic Application</span><span>Generic RAM</span><span>Availability</span></div>
+          </article>
+
+          <article class="project-card reveal" data-cat="telecom">
+            <div class="project-top">
+              <span class="p-cat cat-telecom">Telecom</span>
+              <span class="p-year">2024 — 2025</span>
+            </div>
+            <div class="p-icon"><svg class="ico"><use href="#i-tower"/></svg></div>
+            <h3>GMRC Phase-1 — Telecom</h3>
+            <p>RAM activities through the full system lifecycle, plus FRACAS-based performance monitoring and RAM demonstration against reliability targets.</p>
+            <div class="p-chips"><span>Lifecycle RAM</span><span>FRACAS</span><span>RAM Demonstration</span></div>
+          </article>
+
+          <article class="project-card reveal delay-1" data-cat="signalling">
+            <div class="project-top">
+              <span class="p-cat cat-signalling">Signalling</span>
+              <span class="p-year">2024 — 2025</span>
+            </div>
+            <div class="p-icon"><svg class="ico"><use href="#i-signal"/></svg></div>
+            <h3>GMRC Phase-2 — Signalling</h3>
+            <p>Interface Hazard Analysis (IHA) for the Rolling Stock–Signalling interface — hazard identification, risk assessment, mitigation and RAM prediction.</p>
+            <div class="p-chips"><span>IHA</span><span>Interface Hazards</span><span>RAM Prediction</span></div>
+          </article>
+
+          <article class="project-card reveal delay-2" data-cat="ps">
+            <div class="project-top">
+              <span class="p-cat cat-ps">PS &amp; Traction</span>
+              <span class="p-year">Stages 3 &amp; 4</span>
+            </div>
+            <div class="p-icon"><svg class="ico"><use href="#i-bolt"/></svg></div>
+            <h3>RRTS — PST &amp; OHE</h3>
+            <p>Safety Assurance contributions for Stages 3 and 4 of the Regional Rapid Transit System project (Power Supply &amp; Overhead Equipment).</p>
+            <div class="p-chips"><span>Safety Assurance</span><span>PST</span><span>OHE</span></div>
+          </article>
+        </div>
+        <p class="filter-empty" id="filterEmpty" hidden>No projects in this category.</p>
+      </div>
+    </section>
+    <!-- EDUCATION -->
+    <section class="section alt" id="education">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Education</span>
+          <h2>Academic <span class="accent">background</span></h2>
+        </div>
+        <div class="edu-grid">
+          <article class="edu-card reveal">
+            <div class="edu-icon"><svg class="ico"><use href="#i-grad"/></svg></div>
+            <div class="edu-body">
+              <span class="edu-year">2021 — 2024</span>
+              <h3>B.Tech — Electrical &amp; Electronics Engineering</h3>
+              <p>RVR &amp; JC College of Engineering</p>
+              <span class="edu-score">CGPA 7.8 / 10</span>
+            </div>
+          </article>
+          <article class="edu-card reveal delay-1">
+            <div class="edu-icon"><svg class="ico"><use href="#i-grad"/></svg></div>
+            <div class="edu-body">
+              <span class="edu-year">2018 — 2021</span>
+              <h3>Diploma — Electrical &amp; Electronics Engineering</h3>
+              <p>AANM &amp; VVRSR Polytechnic</p>
+              <span class="edu-score">93.4%</span>
+            </div>
+          </article>
+          <article class="edu-card reveal delay-2">
+            <div class="edu-icon"><svg class="ico"><use href="#i-grad"/></svg></div>
+            <div class="edu-body">
+              <span class="edu-year">2017 — 2018</span>
+              <h3>Class 10th — SSC</h3>
+              <p>St. Johns E.M. High School</p>
+              <span class="edu-score">CGPA 9.2 / 10</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head center">
+          <span class="kicker">Contact</span>
+          <h2>Let's build <span class="accent">reliable</span> railways</h2>
+          <p>Open to System Assurance / RAMS opportunities, project collaborations and interesting conversations.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <div class="c-item">
+              <div class="c-icon"><svg class="ico"><use href="#i-mail"/></svg></div>
+              <div class="c-data">
+                <span>Email</span>
+                <a href="mailto:sivasaimutyala2003@gmail.com">sivasaimutyala2003@gmail.com</a>
+                <button class="mini-btn" id="copyEmail" type="button" title="Copy email address" aria-label="Copy email address"><svg class="ico"><use href="#i-copy"/></svg></button>
+              </div>
+            </div>
+            <div class="c-item">
+              <div class="c-icon"><svg class="ico"><use href="#i-phone"/></svg></div>
+              <div class="c-data">
+                <span>Phone</span>
+                <a href="tel:+919059958681">+91 90599 58681</a>
+              </div>
+            </div>
+            <div class="c-item">
+              <div class="c-icon"><svg class="ico"><use href="#i-link"/></svg></div>
+              <div class="c-data">
+                <span>LinkedIn</span>
+                <a href="https://linkedin.com/in/siva-sai-chary" target="_blank" rel="noopener noreferrer">linkedin.com/in/siva-sai-chary</a>
+              </div>
+            </div>
+            <div class="c-item">
+              <div class="c-icon"><svg class="ico"><use href="#i-pin"/></svg></div>
+              <div class="c-data">
+                <span>Location</span>
+                <strong>Vijayawada, Andhra Pradesh, India</strong>
+              </div>
+            </div>
+            <a href="CV_SIVA.pdf" class="btn btn-primary cta-cv" download><svg class="ico"><use href="#i-download"/></svg> Download my CV</a>
+          </div>
+
+          <form class="contact-form reveal delay-1" id="contactForm" novalidate>
+            <div class="form-row">
+              <label class="field">
+                <span>Your name</span>
+                <input type="text" name="name" placeholder="Jane Doe" required autocomplete="name" />
+              </label>
+              <label class="field">
+                <span>Email</span>
+                <input type="email" name="email" placeholder="jane@company.com" required autocomplete="email" />
+              </label>
+            </div>
+            <label class="field">
+              <span>Subject</span>
+              <input type="text" name="subject" placeholder="RAMS engineer opportunity" required />
+            </label>
+            <label class="field">
+              <span>Message</span>
+              <textarea name="message" rows="5" placeholder="Tell me about the role or project…" required></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit"><svg class="ico"><use href="#i-send"/></svg> Send message</button>
+            <p class="form-note">Opens your email app with everything pre-filled — no data leaves your browser.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><svg class="logo-glyph" viewBox="0 0 48 48"><g fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 33V21a8 8 0 0 1 16 0v12"/><rect x="19" y="19.5" width="10" height="6.5" rx="1.8"/><path d="M19.6 28.8h2.2M26.2 28.8h2.2"/><path d="M14.5 33.5h19"/><path d="m18.2 37.2-2.7 4.4M29.8 37.2l2.7 4.4M13.8 41.6h20.4"/></g></svg></span>
+        <div>
+          <strong>Siva Sai Chary Mutyala</strong>
+          <p>System Assurance / RAMS Engineer — Railway Sector</p>
+        </div>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-social">
+        <a href="mailto:sivasaimutyala2003@gmail.com" aria-label="Email" title="Email"><svg class="ico"><use href="#i-mail"/></svg></a>
+        <a href="tel:+919059958681" aria-label="Phone" title="Phone"><svg class="ico"><use href="#i-phone"/></svg></a>
+        <a href="https://linkedin.com/in/siva-sai-chary" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><svg class="ico"><use href="#i-link"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year">2026</span> Siva Sai Chary Mutyala · All rights reserved.</p>
+      <p>EN 50126 · RAMS · System Assurance</p>
+    </div>
+  </footer>
+
+  <a href="#home" class="back-top" id="backTop" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </a>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
